@@ -13,6 +13,12 @@ enum Mode {
     Table
 };
 
+enum PlanType{
+    X,
+    Y,
+    ROTATE
+};
+
 
 double get_t_max(double x1, double v0, double v1, 
                  double a_max, double d_max, double v_max);
@@ -20,7 +26,7 @@ double get_t_max(double x1, double v0, double v1,
 double compute_motion_1d(double x1, double v0, double v1,
                        const double a_max, const double d_max, const double v_max,
                        double &traj_time, double &traj_time_acc, double &traj_time_dec, double &traj_time_flat,
-					   Mode mode,double dt);
+					   Mode mode,double dt,PlanType PT);
 
 void compute_motion_2d(double &x1, double &v0_x, double v1_x, 
                        double &y1, double &v0_y, double v1_y,
