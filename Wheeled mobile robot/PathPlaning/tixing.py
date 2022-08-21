@@ -237,6 +237,7 @@ if __name__ == "__main__":
         time, ThetaTable = tixing(target_position[i], target_position[i + 1], a_limit, velocity_threshold, dt, 0)
         total_time += time
     expected_time = 0.0
+    print(SpeedTable)
     #控制时间应用例子
     current_position, expected_time = tixing(target_position[0], target_position[1], a_limit, velocity_threshold, 0, 0.01)
     print(current_position)
